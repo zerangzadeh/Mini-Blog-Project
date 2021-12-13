@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\IT Studies\Asp.Net Sample\MiniBlogRazorPages\MiniBlog\MiniBlog
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/IT Studies/Asp.Net Sample/MiniBlogRazorPages/MiniBlog/MiniBlog/Pages/ArticleDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/IT Studies/Asp.Net Sample/MiniBlogRazorPages/MiniBlog/MiniBlog/Pages/CreateArticle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQXJ0aWNsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/IT Studies/Asp.Net Sample/MiniBlogRazorPages/MiniBlog/MiniBlog/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

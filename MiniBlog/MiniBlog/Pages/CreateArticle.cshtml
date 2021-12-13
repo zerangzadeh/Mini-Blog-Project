@@ -1,0 +1,43 @@
+﻿@page
+@model MiniBlog.Pages.CreateArticleModel
+@{
+    ViewData["Title"] = "ایجاد مقاله جدید";
+}
+<div class="col-12 text-center">
+    <div class="col-6 text-center mr-auto ml-auto">
+        <h3 class="border-bottom pb-2">ایجاد مقاله جدید</h3>
+    </div>
+
+</div>
+<form class="mr-auto ml-auto" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label></label>
+            <input class="form-control">
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label></label>
+            <input class="form-control">
+            <span class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <label></label>
+            <input class="form-control">
+        </div>
+        <div class="form-group col-md-6">
+            <label></label>
+            <input class="form-control">
+        </div>
+        <div class="form-group col-md-12">
+            <label></label>
+            <textarea class="form-control"></textarea>
+            <span class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label></label>
+        <textarea rows="5" type="text" class="form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">ارسال</button>
+</form>

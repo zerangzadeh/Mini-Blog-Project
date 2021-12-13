@@ -1,7 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using MiniBlog;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<ArticleContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("MiniBlog")));
 
 var app = builder.Build();
 
