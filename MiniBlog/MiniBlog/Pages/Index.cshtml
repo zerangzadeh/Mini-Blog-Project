@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "صفحه اصلی";
 }
 
 <div class="col-12 mb-3">
@@ -10,4 +10,32 @@
             <h2>تازه ترین مقالات</h2>
         </div>
     </div>
+</div>
+<div class="row">
+    @foreach (var item in Model.articles)
+    {
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.PicSrc"; alt="@item.PicALT" title="@item.PicTitle">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <p class="card-text">@item.ShortDESC</p>
+                    <p class="card-text">@item.CreationDate</p>
+                    <a  class="btn btn-primary"
+                    asp-page="./ArticleDetails"
+                    asp-route-id="@item.ArticleID">
+                        ادامه مطلب</a>
+                          <a  class="btn btn-danger"
+                    asp-page-handler="Delete"
+                    asp-route-id="@item.ArticleID">
+                       حذف</a>
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+
 </div>

@@ -6,7 +6,7 @@ namespace MiniBlog
 {
     public class ArticleContext : DbContext
     {
-        DbSet<Article> Articles;
+        public DbSet<Article> Articles { get; set; }
 
         public ArticleContext(DbContextOptions<ArticleContext> options) : base(options)
         {
@@ -23,3 +23,6 @@ namespace MiniBlog
     }
 
 }
+
+
+

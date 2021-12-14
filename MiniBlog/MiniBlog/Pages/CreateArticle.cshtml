@@ -6,38 +6,49 @@
 <div class="col-12 text-center">
     <div class="col-6 text-center mr-auto ml-auto">
         <h3 class="border-bottom pb-2">ایجاد مقاله جدید</h3>
-    </div>
+ </div>
 
 </div>
+    
+    @if  (Model.ErrorMessage != null)
+    {
+       <div class="alert alert-danger">
+            @Model.ErrorMessage
+        </div>
+    }
 <form class="mr-auto ml-auto" method="post">
-    <div class="form-row">
+        <div class="form-row">
         <div class="form-group col-md-6">
-            <label></label>
-            <input class="form-control">
-            <span class="text-danger"></span>
+            <label asp-for="@Model.command.Title"></label>
+            <input class="form-control" asp-for="@Model.command.Title">
+            <span asp-validation-for="@Model.command.Title" class="text-danger"></span>
+       </div>
+        <div class="form-group col-md-6">
+            <label asp-for="@Model.command.PicTitle"></label>
+            <input class="form-control" asp-for="@Model.command.PicTitle">
+            <span class="text-danger" asp-validation-for="@Model.command.PicTitle"></span>
         </div>
         <div class="form-group col-md-6">
-            <label></label>
-            <input class="form-control">
-            <span class="text-danger"></span>
+            <label asp-for="@Model.command.PicALT">ALTتصویر</label>
+            <input class="form-control" asp-for="@Model.command.PicALT">
+            <span class="text-danger" asp-validation-for="@Model.command.PicALT"></span>
+
         </div>
         <div class="form-group col-md-6">
-            <label></label>
-            <input class="form-control">
-        </div>
-        <div class="form-group col-md-6">
-            <label></label>
-            <input class="form-control">
+            <label asp-for="@Model.command.PicSrc"></label>
+            <input class="form-control" asp-for="@Model.command.PicSrc">
+            <span class="text-danger" asp-validation-for="@Model.command.PicSrc"></span>
         </div>
         <div class="form-group col-md-12">
-            <label></label>
-            <textarea class="form-control"></textarea>
-            <span class="text-danger"></span>
+            <label asp-for="@Model.command.ShortDESC"></label>
+            <textarea class="form-control" asp-for="@Model.command.ShortDESC"></textarea>
+            <span class="text-danger" asp-validation-for="@Model.command.ShortDESC"></span>
         </div>
     </div>
     <div class="form-group">
-        <label></label>
-        <textarea rows="5" type="text" class="form-control"></textarea>
+        <label asp-for="@Model.command.Body"></label>
+        <textarea rows="5" type="text" class="form-control" asp-for="@Model.command.Body"></textarea>
+        <span class="text-danger" asp-validation-for="@Model.command.Body"></span>
     </div>
     <button type="submit" class="btn btn-success">ارسال</button>
 </form>
